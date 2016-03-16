@@ -1,0 +1,8 @@
+---
+
+- name: Provision a benchmarking node
+  hosts: all
+  gather_facts: yes
+  become: yes
+  roles:
+    - common

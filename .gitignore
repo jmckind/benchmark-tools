@@ -1,0 +1,8 @@
+# Virtualenv artifacts
+.venv
+
+# Vagrant artifacts
+.vagrant
+
+# Ansible artifacts
+*.retry
