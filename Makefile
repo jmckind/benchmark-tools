@@ -5,7 +5,8 @@ VENV_ACTIVATE=source $(VENV)/bin/activate
 
 setup:
 	test -d $(VENV) || virtualenv $(VENV) --no-site-packages
-	./$(VENV)/bin/pip install -r requirements.txt
+	$(VENV_ACTIVATE) && pip install -U pip
+	$(VENV_ACTIVATE) && pip install -r requirements.txt
 
 run:
 	$(VENV_ACTIVATE) && vagrant up
