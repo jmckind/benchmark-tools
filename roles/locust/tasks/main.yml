@@ -7,7 +7,7 @@
   copy: src=requirements.txt dest={{ locust_state_dir }}/requirements.txt
 
 - name: ensure virtualenv is present
-  command: virtualenv {{ locust_venv_dir }}
+  command: virtualenv {{ locust_venv_dir }} --prompt="(locust) " creates={{ locust_venv_dir }}
 
 - name: ensure required python modules are present
   pip: requirements={{ locust_state_dir }}/requirements.txt virtualenv={{ locust_venv_dir }}
