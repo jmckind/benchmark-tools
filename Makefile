@@ -30,4 +30,7 @@ update:
 	vagrant box update
 
 clean: destroy
-	rm -fr $(VENV) .vagrant
+	rm -fr \
+		$(VENV) \
+		.vagrant \
+		*.retry
