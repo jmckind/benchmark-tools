@@ -1,6 +1,13 @@
 ---
 
-- name: ensure required system packages are present
+- name: ensure common system packages are present
   apt: name={{ item }} state=present update_cache=yes
   with_items:
-    - apache2-utils
+    - build-essential
+    - git
+    - htop
+    - python-dev
+    - python-pip
+    - python-virtualenv
+    - tree
+    - vim
