@@ -1,0 +1,4 @@
+---
+
+locust_state_dir: /var/lib/locust
+locust_venv_dir: "{{ locust_state_dir }}/venv"

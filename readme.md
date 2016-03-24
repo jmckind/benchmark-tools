@@ -44,6 +44,7 @@ Cleaning the environment will clean out all generated artifacts.
 The following tools will be installed in the VM.
 
 * ab - Apache HTTP server benchmarking tool
+* locust - Distributed, python based user load testing tool.
 
 ## License
 

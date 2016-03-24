@@ -1,0 +1,13 @@
+---
+
+- name: ensure state directory is present
+  file: path={{ locust_state_dir }} state=directory
+
+- name: ensure requirements file is present
+  copy: src=requirements.txt dest={{ locust_state_dir }}/requirements.txt
+
+- name: ensure virtualenv is present
+  command: virtualenv {{ locust_venv_dir }}
+
+- name: ensure required python modules are present
+  pip: requirements={{ locust_state_dir }}/requirements.txt virtualenv={{ locust_venv_dir }}
